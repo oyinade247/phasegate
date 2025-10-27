@@ -52,7 +52,7 @@ public class SimpleArithmeticApp{
 		long endTime = System.currentTimeMillis();
 	 
 	  System.out.printf("The total number of your score is %d%s%d%n ", countCorrectAnswer, "/", numberOfQuestions);	
-	 long totalTime = countTime - endTime ;
+	 long totalTime = endTime - countTime;
 	long total = totalTime / 1000;
 	long seconds = total % 60;
 	 System.out.print("The time in seconds spent is " + seconds + "seconds");
