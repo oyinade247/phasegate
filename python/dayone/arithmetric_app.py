@@ -11,25 +11,24 @@ while count < number_of_questions:
 	number_two = random.randint(0, 50)
 	count += 1
 	
-	#swap = number_one
-	#number_one = number_two
-	#number_two = swap
+	highest = max(number_one, number_two)
+	lowest = min(number_one, number_two)
 	
-	prompt = int(input(f"what is {number_one}  - {number_two} = "))
-	if number_one - number_two == prompt :
+	prompt = int(input(f"what is {highest}  - {lowest} = "))
+	if highest - lowest == prompt :
 		print("You are correct")
 		correct_answer += 1
 
-	elif number_one - number_two != prompt:
-		correction = int(input(f"Enter the correctnanswer for the last time: {number_one} - {number_two} = "))
+	elif highest - lowest != prompt:
+		correction = int(input(f"Enter the correctnanswer for the last time: {highest} - {lowest} = "))
 
-		if number_one - number_two == correction:
+		if highest - lowest == correction:
 			print("you are right") 
 			correct_answer += 1
 
 		else:
 			print("Fish brain")
-			print(f"The correct answer should be {number_one} - {number_two} = {number_one - number_two}")
+			print(f"The correct answer should be {highest} - {lowest} = {highest - lowest}")
 
 
 end_time = datetime.datetime.now()

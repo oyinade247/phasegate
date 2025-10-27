@@ -18,29 +18,32 @@ public class SimpleArithmeticApp{
 	   	count++;
 
 
-	  //int hold = numberOne;
-	  //numberOne = numberTwo;
-	  //numberTwo = hold;
+	  //int temp = numberOne;
+	 // numberOne = numberTwo;
+	 // numberTwo = temp;
  	 
-	 	System.out.printf("What is %d %s %d %s",numberOne, " - " , numberTwo , "=");
+		int highest = Math.max(numberOne, numberTwo);
+		int lowest = Math.min(numberOne, numberTwo);
+
+	 	System.out.printf("What is %d %s %d %s",highest, " - " , lowest , "= ");
 	 	int answer = input.nextInt();
 		
-	 	if(numberOne - numberTwo == answer){
+	 	if(highest - lowest == answer){
 	  		System.out.println("You are right! ");
 	   		countCorrectAnswer++;
 	 	}
 
-		else if(numberOne - numberTwo != answer){
-			System.out.print("Enter the correct answer for the last time: " + numberOne + "-" +  numberTwo + ":");
+		else if(highest - lowest != answer){
+			System.out.print("Enter the correct answer for the last time: " + highest + "-" +  lowest + ":");
 		 	answer = input.nextInt();
 
-			if(numberOne - numberTwo == answer){
+			if(highest - lowest == answer){
 		 		System.out.println("You are right! ");
 				countCorrectAnswer++;
 	
 			}else{
 				System.out.println("fish brain!");
-				System.out.printf("You are wrong! %nThe correct answer should be %d %s %d %s %d%n", numberOne, "-", numberTwo, "=",(numberOne - numberTwo));
+				System.out.printf("You are wrong! %nThe correct answer should be %d %s %d %s %d%n", highest, "-", lowest, "= ",(highest - lowest));
 
 			    }
              	

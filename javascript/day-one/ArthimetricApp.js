@@ -14,28 +14,27 @@ let countCorrectAnswer = 0;
 	   	count++;
 
 
-	  let hold = numberOne;
-	  numberOne = numberTwo;
-	  numberTwo = hold;
+		let highest = Math.max(numberOne, numberTwo);
+		let lowest = Math.min(numberOne, numberTwo)	 		
  	 
-	 	let answer = prompt("What is "+ numberOne +  " - " + numberTwo + "=");
+	 	let answer = prompt("What is "+ highest +  " - " + lowest + " = ");
 	 	
 		
-	 	if(numberOne - numberTwo == answer){
+	 	if(highest - lowest == answer){
 	  		console.log("You are right! ");
 	   		countCorrectAnswer++;
 	 	}
 
-		else if(numberOne - numberTwo != answer){
-			let answer = prompt("Enter the correct answer for the last time: " + numberOne + "-" +  numberTwo + ":");
+		else if(highest - lowest != answer){
+			let answer = prompt("Enter the correct answer for the last time: " + highest + "-" +  lowest + ":");
 
-			if(numberOne - numberTwo == answer){
+			if(highest - lowest == answer){
 		 		console.log("You are right! ");
 				countCorrectAnswer++;
 	
 			}else{
 				console.log("fish brain!");
-				console.log("You are wrong! The correct answer should be"+ numberOne + "-" + numberTwo, "="+ (numberOne - numberTwo));
+				console.log("You are wrong! The correct answer should be"+ highest + "-" + lowest, " = "+ (highest - lowest));
 
 			    }
              	
