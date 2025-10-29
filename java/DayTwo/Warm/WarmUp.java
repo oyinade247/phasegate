@@ -21,7 +21,7 @@ public static double getNumberOfYear(double number){
 
 	while(multiply > 0){
 	
-	multiply -= rate;
+	multiply /= rate;
 		count++;
 		
 		
