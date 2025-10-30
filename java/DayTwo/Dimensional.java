@@ -1,54 +1,31 @@
 import java.util.Arrays;
-public class Dimensional{
-	public static void main(String [] args){
+public class HighestTwoD{
+	public static void main(String[] args){
 
-	double [][] numbers = {{1.5, 2.3, 3.7, 4.6},{5.1,6.2,7.3,8.4}, {9.5,10.1,11.8,12.7}};
+	double [][] number = {
+	{1.5, 2.3, 3.7, 4.6},
+	{5.1,6.2,7.3,8.4},
+ 	{9.5,10.1,11.8,12.7}};
 
-	
-	double[] highestRow = numbers[0];
-	double index = 0;
 
-	for (int rows = 1; rows < numbers.length; rows++) {
-		for (int columns = 0; columns < rows; columns++){
-			if(numbers[columns] < numbers[rows]){
-				highestRow = numbers[rows];
+
+	double [] highest = new int[number.length]; 
+	double []  index1 = new int[number.length]; 
+
+	for(int count = 0; count < number.length; count++){
+		double max = number[count][0];
+		int index = 0;
+
+		for(int counter = 0; counter < number[count].length; counter++){
+			if(number[count][counter] > max){
+				max = number[count][counter];
+				index = counter;
+				
 			}
-			
-		}
 
- 	}
-		System.out.print(Arrays.toString(highestRow));
-
-	
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+			highest[count] = max;
+			index1[count] = index ;
+	}
+	}
+		System.out.print(Arrays.toString(highest));
+		System.out.print(Arrays.toString(index1));	
