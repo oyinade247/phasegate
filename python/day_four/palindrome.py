@@ -15,7 +15,7 @@ def isPalindrome(list):
 	return list
 
 
-list =  ["madam", "racecar", "hello", "noon"];
+list =  ["madam", "racecar", "hello", "noon","ewe", "ada"];
 print(isPalindrome(list))
 		
 

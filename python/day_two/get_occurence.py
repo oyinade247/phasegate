@@ -1,15 +1,10 @@
-def get_occurence(word, ch):
+def occurence(word):
+	unique = []
 	count = 0
-
-	for char in word.lower():
-		if letter in char:
-			count += 1		
-			
-	return count
-
+	for char in word:
+		if char not in unique:
+			unique.append(char)
+			count += 1
+	return unique
 
 
-
-word = "Hello World"
-letter = "d"
-print(get_occurence(word, letter))

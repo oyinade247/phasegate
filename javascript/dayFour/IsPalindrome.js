@@ -3,7 +3,7 @@ function elementIsPalindrome(my_list){
 let new_list = []
 	for(let count = 0; count < my_list.length; count++){
 		
-			let palindrome = ""
+		let palindrome = ""
 		for (let counter = 0; counter < my_list[count].length; counter++){
 			palindrome = my_list[count].charAt(counter) + palindrome
 		}
@@ -20,4 +20,8 @@ let new_list = []
 
 
 }
+list =  ["madam", "racecar", "hello", "noon"];
+console.log(elementIsPalindrome(list))
+
+
 

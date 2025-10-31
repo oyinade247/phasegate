@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class PerfectSquare{
 
  	public static void main(String [] args){
-		int[] list =  {4, 9, 25, 49,6};
+		int[] list =  {4, 9, 25, 49,7,28,100};
 
 		System.out.print(Arrays.toString(getPerfectSquare(list)));
 	}
