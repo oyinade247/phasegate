@@ -8,7 +8,7 @@ public class ParkingSlot{
 
 
 public static void mainMenu(int [] listSpace){
-		System.out.print( """
+		System.out.println( """
 			WELCOME TO OYINAAAADE PARKING MINI PARKING SYSTEM
 
 			1 => Park a car
@@ -40,7 +40,9 @@ public static void mainMenu(int [] listSpace){
 			case "2":
 				System.out.print ("Enter slot number to remove a car: ");
 				int remove = input.nextInt();
-				if (removeCar(listSpace, remove)){
+				String removed = removeCar(listSpace, remove);
+				boolean myRemoved = Boolean.parseBoolean(removed);
+				if ( myRemoved){
 					System.out.print("Your car has removed from slot" + remove);
 				}
 				else{
