@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 public class ParkingSlot{
 	
 	public static void main(String [] args){
@@ -33,38 +34,42 @@ public static void mainMenu(int [] listSpace){
 					System.out.print("No space available!!!");
 				}
 				else{
-					System.out.print("Your car has been  parked at slot " + parkedCar );
+					System.out.println("Your car has been  parked at slot " + parkedCar );
 				}
 				mainMenu(listSpace);
+				break;
 
 			case "2":
-				System.out.print ("Enter slot number to remove a car: ");
+				System.out.println("Enter slot number to remove a car: ");
 				int remove = input.nextInt();
 				String removed = removeCar(listSpace, remove);
-				boolean myRemoved = Boolean.parseBoolean(removed);
-				if ( myRemoved){
-					System.out.print("Your car has removed from slot" + remove);
+				if (removed.equals(removed)){
+					System.out.println("Your car has removed from slot " + remove);
 				}
 				else{
 					System.out.print("Invalid input");
 					}
 				mainMenu(listSpace);
+				break;
 
 
 			case "3":
-				System.out.print(listSpace);
+				System.out.println(Arrays.toString(listSpace));
+				mainMenu(listSpace);
+				break;
+
 				
 
 
 			case "4":
-				System.out.print("See you next time!");
+				System.out.println("See you next time!");break;
 
 			
 			 default :
 				System.out.print("invalid input");
 				mainMenu(listSpace);
             
-
+				break;
 
 
 			}
